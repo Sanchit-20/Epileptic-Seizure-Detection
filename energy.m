@@ -69,7 +69,8 @@ epoc_energy=zeros(1,10);
 for i=1:10
     arr=zeros(1,400);
     for j=1:400
-        arr(j)=A(i+j);
+        %arr(j)=A(i+j);
+        arr(j)=A((i-1)*400+(j));
     end
     est_arr=filter([0 -temp(2:end)],1,arr);
     temp_energy=0;
